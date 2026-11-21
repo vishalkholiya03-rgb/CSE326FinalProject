@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Studio | Move With Joy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a class="brand" href="#home"><span class="brand-icon">✿</span> DANCE STUDIO</a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#dance">Dance Forms</a>
+            <a href="#classes">Classes</a>
+            <a href="#contact">Contact</a>
+            <button class="nav-button" onclick="openLogin()">Join Us</button>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="hero-text">
+            <span class="eyebrow">FIND YOUR RHYTHM</span>
+            <h1>Dance With<br><span>Your Heart.</span></h1>
+            <h2>Feel the Music. Live the Moment.</h2>
+            <p>Discover your passion for dance with our experienced instructors and a warm, welcoming community.</p>
+            <button onclick="openLogin()">Start Your Journey <span>→</span></button>
+        </div>
+        <div class="hero-note">
+            <span>MOVE</span>
+            <span>FEEL</span>
+            <span>EXPRESS</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <div class="section-kicker">A PLACE TO GROW</div>
+        <h1>About Our Studio</h1>
+        <p class="about-text">
+            Welcome to Dance Studio! We believe that dance is a beautiful way to express yourself.
+            Our academy provides a friendly environment where beginners and experienced dancers
+            can learn, build confidence and grow.
+        </p>
+        <div class="about-points">
+            <div><span>01</span><h3>Learn</h3><p>Explore dance styles with guided classes.</p></div>
+            <div><span>02</span><h3>Connect</h3><p>Meet people who share your passion.</p></div>
+            <div><span>03</span><h3>Shine</h3><p>Build confidence with every step.</p></div>
+        </div>
+    </section>
+
+    <!-- Dance Forms -->
+    <section id="dance" class="content-section dance-section">
+        <div class="section-kicker">EXPLORE YOUR STYLE</div>
+        <h1>Explore Dance Forms</h1>
+        <p class="section-intro">Every style has its own story. Find the one that speaks to you.</p>
+
+        <div class="dance-container">
+            <div class="dance-card">
+                <div class="dance-image">
+                    <img src="https://www.urbandancestudio.in/image/indeximage.png" alt="Hip Hop dance">
+                    <span class="image-number">01</span>
+                </div>
+                <div class="dance-card-text">
+                    <h3>Hip Hop</h3>
+                    <p>An energetic street dance style with freestyle moves and powerful beats.</p>
+                </div>
+            </div>
+
+            <div class="dance-card">
+                <div class="dance-image">
+                    <img src="https://kadamb.net/css/img/institute-gallery/institutegalleryreal-8.jpg" alt="Kathak dance">
+                    <span class="image-number">02</span>
+                </div>
+                <div class="dance-card-text">
+                    <h3>Kathak</h3>
+                    <p>An Indian classical dance form known for graceful movements and storytelling.</p>
+                </div>
+            </div>
+
+            <div class="dance-card">
+                <div class="dance-image">
+                    <img src="https://themoondancestudio.github.io/assets/img/portfolio/app-3.jpeg" alt="Bollywood dance">
+                    <span class="image-number">03</span>
+                </div>
+                <div class="dance-card-text">
+                    <h3>Bollywood</h3>
+                    <p>A fun dance style inspired by Indian movies, music and expressive moves.</p>
+                </div>
+            </div>
+
+            <div class="dance-card">
+                <div class="dance-image">
+                    <img src="https://i-media.vyaparify.com/vcards/blogs/175350/Dance-to-the-Beat.jpg" alt="Contemporary dance">
+                    <span class="image-number">04</span>
+                </div>
+                <div class="dance-card-text">
+                    <h3>Contemporary</h3>
+                    <p>A creative dance form that combines emotions, fluidity and body movements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="content-section classes-section">
+        <div class="section-kicker">FIND YOUR PERFECT BATCH</div>
+        <h1>Our Dance Classes</h1>
+        <p class="section-intro">Choose a batch that fits your schedule and start learning.</p>
+
+        <div class="class-container">
+            <div class="class-box">
+                <span class="batch-tag">START HERE</span>
+                <h3>Beginner Batch</h3>
+                <p>Monday - Wednesday</p>
+                <p class="class-time">10:00 AM - 11:00 AM</p>
+                <button onclick="openLogin()">Book This Batch</button>
+            </div>
+
+            <div class="class-box featured-class">
+                <span class="batch-tag">LEVEL UP</span>
+                <h3>Intermediate Batch</h3>
+                <p>Tuesday - Thursday</p>
+                <p class="class-time">12:00 PM - 1:00 PM</p>
+                <button onclick="openLogin()">Book This Batch</button>
+            </div>
+
+            <div class="class-box">
+                <span class="batch-tag">KEEP SHINING</span>
+                <h3>Advanced Batch</h3>
+                <p>Friday - Saturday</p>
+                <p class="class-time">4:00 PM - 5:00 PM</p>
+                <button onclick="openLogin()">Book This Batch</button>
+            </div>
+        </div>
+        <button class="outline-button" onclick="openLogin()">View Booking Options</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section contact-section">
+        <div>
+            <div class="section-kicker">WE'D LOVE TO HEAR FROM YOU</div>
+            <h1>Let's Get Moving!</h1>
+            <p>Have a question about classes? Get in touch with our studio.</p>
+        </div>
+        <div class="contact-details">
+            <p><strong>Email</strong><br>dancestudio@gmail.com</p>
+            <p><strong>Phone</strong><br>+91 9876543210</p>
+            <p><strong>Address</strong><br>Dance Studio, India</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Dance Studio. Made for everyone who loves to move.</p>
+    </footer>
+
+    <!-- Login / Registration Modal -->
+    <div id="loginPage">
+        <div class="login-box">
+            <button class="close-btn" onclick="closeLogin()" aria-label="Close login">×</button>
+            <div class="login-decoration">✿</div>
+            <div class="section-kicker">YOUR DANCE JOURNEY STARTS HERE</div>
+            <h1>Welcome to Dance Studio</h1>
+            <p class="login-subtitle">Register with your details to access your studio dashboard.</p>
+
+            <form onsubmit="login(event)">
+                <label for="username">Full Name</label>
+                <input type="text" id="username" placeholder="Enter your full name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="you@example.com" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="10-digit phone number"
+                       pattern="[0-9]{10}" maxlength="10" required>
+
+                <button type="submit" class="form-submit">Continue to Studio <span>→</span></button>
+            </form>
+            <p id="loginMessage"></p>
+            <p class="demo-note">Demo Admin: admin@dancestudio.com<br>Demo Instructor: teacher@dancestudio.com</p>
+        </div>
+    </div>
+
+    <!-- Management Dashboard -->
+    <div id="mainPage">
+        <div class="dashboard-header">
+            <a class="dashboard-brand" href="#mainPage">✿ DANCE STUDIO</a>
+            <h2>Studio Management</h2>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="dashboard-welcome">
+                <div>
+                    <div class="section-kicker">YOUR SPACE, YOUR RHYTHM</div>
+                    <h1 id="welcome"></h1>
+                    <p>Manage your classes and keep your dance journey moving.</p>
+                </div>
+                <div class="welcome-flower">✿</div>
+            </div>
+
+            <div class="dashboard-menu-wrap">
+                <div id="adminMenu">
+                    <button onclick="showSection('students')">Students</button>
+                    <button onclick="showSection('classesAdmin')">Manage Classes</button>
+                    <button onclick="showSection('bookings')">Bookings</button>
+                    <button onclick="showSection('reports')">Reports</button>
+                </div>
+
+                <div id="studentMenu">
+                    <button onclick="showSection('availableClasses')">View Classes & Book</button>
+                    <button onclick="showSection('myBookings')">My Bookings</button>
+                </div>
+
+                <div id="teacherMenu">
+                    <button onclick="showSection('availableClasses')">My Classes</button>
+                </div>
+            </div>
+
+            <div id="students" class="section">
+                <h2>Student Records</h2>
+                <p class="section-help">Add and manage student details.</p>
+                <div class="admin-form-row">
+                    <input id="newStudent" placeholder="Student Name">
+                    <input id="newStudentEmail" placeholder="Student Email">
+                    <button onclick="addStudent()">Add Student</button>
+                </div>
+                <ul id="studentList"></ul>
+            </div>
+
+            <div id="classesAdmin" class="section">
+                <h2>Manage Dance Classes</h2>
+                <p class="section-help">Add new dance forms and their class timings.</p>
+                <div class="admin-form-row">
+                    <input id="newClass" placeholder="Dance Form">
+                    <input id="newTime" placeholder="Class Timing">
+                    <button onclick="addClass()">Add Class</button>
+                </div>
+                <ul id="classList"></ul>
+            </div>
+
+            <div id="availableClasses" class="section">
+                <h2>Find Your Dance Class</h2>
+                <p class="section-help">Choose a dance form below, then complete the booking details.</p>
+                <ul id="availableList" class="available-list"></ul>
+
+                <div class="booking-panel">
+                    <div class="booking-panel-heading">
+                        <div class="section-kicker">SAVE YOUR SPOT</div>
+                        <h3>Class Booking Form</h3>
+                        <p>Share your details and select a suitable time slot.</p>
+                    </div>
+
+                    <form onsubmit="submitBooking(event)" class="booking-form">
+                        <div class="booking-field">
+                            <label for="bookingName">Your Name</label>
+                            <input type="text" id="bookingName" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="bookingPhone">Phone Number</label>
+                            <input type="tel" id="bookingPhone" placeholder="10-digit phone number"
+                                   pattern="[0-9]{10}" maxlength="10" required>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="bookingClass">Dance Form / Class</label>
+                            <select id="bookingClass" required>
+                                <option value="">Select a dance form</option>
+                                <option value="Hip Hop">Hip Hop</option>
+                                <option value="Kathak">Kathak</option>
+                                <option value="Bollywood">Bollywood</option>
+                                <option value="Contemporary">Contemporary</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-field">
+                            <label for="bookingTime">Available Time Slot</label>
+                            <select id="bookingTime" required>
+                                <option value="">Select a time slot</option>
+                                <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                                <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
+                                <option value="4:00 PM - 5:00 PM">4:00 PM - 5:00 PM</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="booking-submit">Send Booking Request <span>→</span></button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="bookings" class="section">
+                <h2>All Booking Requests</h2>
+                <p class="section-help">Review student requests and approve or reject them.</p>
+                <ul id="bookingList"></ul>
+            </div>
+
+            <div id="myBookings" class="section">
+                <h2>My Bookings</h2>
+                <p class="section-help">Check the current status of your class requests.</p>
+                <ul id="myBookingList"></ul>
+            </div>
+
+            <div id="reports" class="section">
+                <h2>Studio Reports</h2>
+                <p id="reportData"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

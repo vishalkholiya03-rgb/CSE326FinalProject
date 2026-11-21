@@ -1,0 +1,883 @@
+/* ------------------------------
+   DANCE STUDIO - STYLE SHEET
+--------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #fffdfb;
+    color: #51443d;
+    overflow-x: hidden;
+}
+
+button, input, select {
+    font: inherit;
+}
+
+button {
+    background: #9b6d59;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+button:hover {
+    background: #79513f;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px rgba(121, 81, 63, 0.2);
+}
+
+a {
+    transition: color 0.25s ease;
+}
+
+/* Navigation */
+nav {
+    background: rgba(255, 253, 251, 0.96);
+    padding: 17px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 18px rgba(96, 72, 60, 0.08);
+    backdrop-filter: blur(12px);
+}
+
+.brand, .dashboard-brand {
+    color: #765342;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 19px;
+}
+
+.brand-icon {
+    color: #c9879b;
+    font-size: 25px;
+    margin-right: 7px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a:not(.brand) {
+    text-decoration: none;
+    color: #65564e;
+    font-size: 14px;
+    position: relative;
+}
+
+nav a:not(.brand)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #c9879b;
+    transition: width 0.25s ease;
+}
+
+nav a:not(.brand):hover::after {
+    width: 100%;
+}
+
+.nav-button {
+    background: #a77a64;
+}
+
+/* Home / Hero */
+#home {
+    min-height: 590px;
+    background:
+        linear-gradient(90deg, rgba(48, 36, 31, 0.68), rgba(48, 36, 31, 0.12)),
+        url("https://www.urbandancestudio.in/image/indeximage.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+    position: relative;
+    overflow: hidden;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 50%;
+    right: 8%;
+    bottom: -190px;
+    box-shadow: 0 0 0 35px rgba(255,255,255,0.06), 0 0 0 70px rgba(255,255,255,0.04);
+}
+
+.hero-text {
+    color: white;
+    max-width: 590px;
+    position: relative;
+    z-index: 1;
+    animation: slideIn 0.9s ease both;
+}
+
+.eyebrow, .section-kicker {
+    color: #bd8d78;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 13px;
+}
+
+.hero-text .eyebrow {
+    color: #f3d6d9;
+}
+
+.hero-text h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 1.02;
+    margin-bottom: 17px;
+    letter-spacing: -2px;
+}
+
+.hero-text h1 span {
+    color: #f1c9d2;
+    font-style: italic;
+}
+
+.hero-text h2 {
+    font-size: 21px;
+    font-weight: normal;
+    margin-bottom: 14px;
+}
+
+.hero-text p {
+    line-height: 1.8;
+    margin-bottom: 27px;
+    max-width: 470px;
+    color: #fff4ef;
+}
+
+.hero-text button {
+    background: #d49aaa;
+    color: #49372f;
+    font-weight: bold;
+    padding: 14px 25px;
+}
+
+.hero-text button:hover {
+    background: #f0cbd4;
+}
+
+.hero-note {
+    position: absolute;
+    right: 8%;
+    bottom: 35px;
+    display: flex;
+    gap: 12px;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 3px;
+    z-index: 1;
+}
+
+/* Common Sections */
+.content-section {
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.content-section h1 {
+    color: #765342;
+    margin-bottom: 17px;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: normal;
+}
+
+.section-intro {
+    color: #82736b;
+    margin: 0 auto 35px;
+    line-height: 1.7;
+}
+
+/* About */
+#about {
+    background: #fffdfb;
+}
+
+.about-text {
+    max-width: 780px;
+    margin: auto;
+    line-height: 1.9;
+    font-size: 16px;
+    color: #71635b;
+}
+
+.about-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 42px auto 0;
+}
+
+.about-points div {
+    padding: 25px;
+    background: #f8e9eb;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.about-points div:nth-child(2) {
+    background: #edf2e8;
+}
+
+.about-points div:nth-child(3) {
+    background: #f2e8df;
+}
+
+.about-points div:hover {
+    transform: translateY(-7px);
+}
+
+.about-points span {
+    color: #b77d8d;
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.about-points h3 {
+    color: #765342;
+    margin: 10px 0 7px;
+}
+
+.about-points p {
+    color: #796b62;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Dance Forms */
+.dance-section {
+    background: #f8f1ed;
+}
+
+.dance-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.dance-card {
+    background: #fffdfb;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 7px 24px rgba(91, 67, 54, 0.08);
+    text-align: left;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    animation: fadeUp 0.8s ease both;
+}
+
+.dance-card:nth-child(2) { animation-delay: 0.1s; }
+.dance-card:nth-child(3) { animation-delay: 0.2s; }
+.dance-card:nth-child(4) { animation-delay: 0.3s; }
+
+.dance-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 16px 30px rgba(91, 67, 54, 0.15);
+}
+
+.dance-image {
+    height: 205px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dance-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.dance-card:hover img {
+    transform: scale(1.08);
+}
+
+.image-number {
+    position: absolute;
+    right: 13px;
+    bottom: 12px;
+    color: white;
+    background: rgba(80, 57, 47, 0.65);
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 11px;
+}
+
+.dance-card-text {
+    padding: 19px 18px 22px;
+}
+
+.dance-card h3 {
+    color: #8d6250;
+    margin-bottom: 9px;
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+.dance-card p {
+    color: #796e66;
+    line-height: 1.65;
+    font-size: 13px;
+}
+
+/* Classes */
+.classes-section {
+    background: #fffdfb;
+}
+
+.class-container {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin: 38px 0 28px;
+}
+
+.class-box {
+    background: #edf2e8;
+    padding: 30px 25px;
+    width: 270px;
+    border-radius: 16px;
+    line-height: 2;
+    border: 1px solid #dce5d4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.class-box:nth-child(2) {
+    background: #f9e9ec;
+    border-color: #f0d4da;
+}
+
+.class-box:nth-child(3) {
+    background: #f3e9df;
+    border-color: #e8d7c9;
+}
+
+.class-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(91, 67, 54, 0.1);
+}
+
+.batch-tag {
+    color: #9a7562;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.class-box h3 {
+    color: #765342;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin: 12px 0;
+}
+
+.class-box p {
+    color: #786a61;
+    font-size: 14px;
+}
+
+.class-box .class-time {
+    font-weight: bold;
+    margin: 7px 0 15px;
+}
+
+.outline-button {
+    color: #8d6250;
+    background: transparent;
+    border: 1px solid #b88b78;
+}
+
+.outline-button:hover {
+    color: white;
+}
+
+/* Contact */
+.contact-section {
+    background: #eaf0e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 35px;
+}
+
+.contact-section h1 {
+    margin-bottom: 12px;
+}
+
+.contact-section p {
+    line-height: 1.8;
+    color: #6e6c5f;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.contact-details p {
+    min-width: 145px;
+    font-size: 14px;
+}
+
+.contact-details strong {
+    color: #765342;
+}
+
+footer {
+    background: #765342;
+    color: #fff8f3;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+/* Login Modal */
+#loginPage {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(48, 35, 30, 0.62);
+    z-index: 20;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+}
+
+.login-box {
+    background: #fffdfb;
+    padding: 35px 38px;
+    width: 430px;
+    max-width: 100%;
+    border-radius: 22px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 25px 70px rgba(35, 25, 20, 0.25);
+    animation: popIn 0.35s ease both;
+}
+
+.login-decoration {
+    color: #d69baa;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.login-box h1 {
+    color: #765342;
+    font-family: Georgia, serif;
+    font-size: 29px;
+    margin-bottom: 9px;
+}
+
+.login-subtitle {
+    color: #81736b;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.login-box label, .booking-field label {
+    display: block;
+    color: #765342;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 12px 0 7px;
+}
+
+.login-box input, .booking-field input, .booking-field select,
+.admin-form-row input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #e4d9d2;
+    background: #fffaf7;
+    border-radius: 9px;
+    outline: none;
+    color: #51443d;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-box input:focus, .booking-field input:focus,
+.booking-field select:focus, .admin-form-row input:focus {
+    border-color: #c58c9c;
+    box-shadow: 0 0 0 3px rgba(197, 140, 156, 0.14);
+}
+
+.login-box form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background: #a77a64;
+}
+
+.close-btn {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    background: #f7e8eb;
+    color: #765342;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    font-size: 23px;
+    line-height: 1;
+}
+
+#loginMessage {
+    color: #8c6c54;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.demo-note {
+    color: #988980;
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: center;
+    margin-top: 18px;
+}
+
+/* Dashboard */
+#mainPage {
+    display: none;
+    min-height: 100vh;
+    background: #fbf7f3;
+}
+
+.dashboard-header {
+    background: #765342;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.dashboard-brand {
+    color: white;
+}
+
+.dashboard-header h2 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+.dashboard-header button {
+    background: #d69baa;
+    color: #4f3930;
+}
+
+.dashboard-content {
+    padding: 35px 7%;
+}
+
+.dashboard-welcome {
+    background: #f7e7eb;
+    border-radius: 18px;
+    padding: 28px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.dashboard-welcome h1 {
+    color: #765342;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.dashboard-welcome p {
+    color: #806f65;
+}
+
+.welcome-flower {
+    color: #d69baa;
+    font-size: 80px;
+    animation: slowSpin 18s linear infinite;
+}
+
+.dashboard-menu-wrap {
+    margin: 22px 0;
+}
+
+#adminMenu, #studentMenu, #teacherMenu {
+    display: none;
+}
+
+#adminMenu button, #studentMenu button, #teacherMenu button {
+    margin: 5px 7px 5px 0;
+}
+
+.section {
+    display: none;
+    background: white;
+    padding: 28px;
+    margin-top: 20px;
+    border-radius: 16px;
+    box-shadow: 0 5px 22px rgba(91, 67, 54, 0.06);
+    animation: fadeUp 0.35s ease both;
+}
+
+.section h2 {
+    color: #765342;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.section-help {
+    color: #887a71;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.section li {
+    padding: 14px;
+    margin: 9px 0;
+    background: #fffaf7;
+    border: 1px solid #f0e7e1;
+    border-radius: 9px;
+    list-style: none;
+    line-height: 1.7;
+}
+
+.section li button {
+    margin: 8px 5px 0 0;
+}
+
+.admin-form-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.admin-form-row input {
+    flex: 1;
+    min-width: 180px;
+}
+
+/* Booking Form */
+.available-list {
+    margin-bottom: 25px;
+}
+
+.available-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #edf2e8;
+}
+
+.available-list li button {
+    margin: 0 0 0 12px;
+}
+
+.booking-panel {
+    background: #fbf1f1;
+    border: 1px solid #f0dfe1;
+    border-radius: 16px;
+    padding: 25px;
+    max-width: 780px;
+}
+
+.booking-panel-heading h3 {
+    color: #765342;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin: 4px 0 7px;
+}
+
+.booking-panel-heading p {
+    color: #83736a;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 18px;
+}
+
+.booking-field {
+    text-align: left;
+}
+
+.booking-field select {
+    cursor: pointer;
+}
+
+.booking-submit {
+    grid-column: 1 / -1;
+    margin-top: 15px;
+    justify-self: start;
+}
+
+/* Report text */
+#reportData {
+    background: #edf2e8;
+    border-radius: 12px;
+    padding: 20px;
+    line-height: 2;
+    color: #5f6758;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-35px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.94) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes slowSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+    .dance-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+}
+
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #home {
+        min-height: 480px;
+        padding: 55px 7%;
+        background-position: 60% center;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-note {
+        display: none;
+    }
+
+    .content-section {
+        padding: 60px 6%;
+    }
+
+    .about-points {
+        grid-template-columns: 1fr;
+    }
+
+    .dance-container {
+        grid-template-columns: 1fr;
+    }
+
+    .dance-card {
+        max-width: 420px;
+        margin: auto;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-submit {
+        grid-column: 1;
+        width: 100%;
+    }
+
+    .dashboard-header {
+        flex-wrap: wrap;
+    }
+
+    .dashboard-header h2 {
+        order: 3;
+        width: 100%;
+    }
+
+    .dashboard-content {
+        padding: 20px 5%;
+    }
+
+    .dashboard-welcome {
+        padding: 22px;
+    }
+
+    .welcome-flower {
+        font-size: 48px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .available-list li {
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
